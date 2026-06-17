@@ -3,20 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, MessageCircle, Heart, HeartHandshake } from 'lucide-react';
 
 // Real product images imports
-import imgButterfly from '../assets/Bagkeycahin_Butterfly.png';
-import imgLuffy from '../assets/Bagkeycahin_Luffy.png';
-import imgSunflowerCharm from '../assets/sunflower_charm.png';
-import imgKeycahin from '../assets/Keycahin.png';
-import imgBagk from '../assets/bagk.png';
-import imgPouch from '../assets/pouch.png';
-import imgEarbuds from '../assets/earbuds_holder.png';
-import imgEarpode from '../assets/earpode case.png';
-import imgLipstick from '../assets/lipistikcase.png';
-import imgHair from '../assets/hair_accessory.png';
-import imgHeartclip from '../assets/Hearclip.png';
-import imgSunflower from '../assets/Sunflower.png';
-import imgFlowersBouquet from '../assets/Flowors_Bouquet.png';
-import imgChafaBlooms from '../assets/Handcrafted Chafa blooms.png';
+import imgButterfly from '../assets/Bagkeycahin_Butterfly.webp';
+import imgLuffy from '../assets/Bagkeycahin_Luffy.webp';
+import imgSunflowerCharm from '../assets/sunflower_charm.webp';
+import imgKeycahin from '../assets/Keycahin.webp';
+import imgBagk from '../assets/bagk.webp';
+import imgPouch from '../assets/pouch.webp';
+import imgEarbuds from '../assets/earbuds_holder.webp';
+import imgEarpode from '../assets/earpode case.webp';
+import imgLipstick from '../assets/lipistikcase.webp';
+import imgHair from '../assets/hair_accessory.webp';
+import imgHeartclip from '../assets/Hearclip.webp';
+import imgSunflower from '../assets/Sunflower.webp';
+import imgFlowersBouquet from '../assets/Flowors_Bouquet.webp';
+import imgChafaBlooms from '../assets/Handcrafted Chafa blooms.webp';
 
 const FeaturedCreations = () => {
   const [activeTab, setActiveTab] = useState('All');

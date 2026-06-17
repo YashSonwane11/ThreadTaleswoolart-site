@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
 // Real product images imports
-import imgHeroGallery from '../assets/hero_gallery.png';
-import imgCustomGift from '../assets/custom_gift.png';
-import imgFlowerBouquet from '../assets/flower_bouquet.png';
-import imgBowKeychain from '../assets/bow_keychain.png';
+import imgHeroGallery from '../assets/hero_gallery.webp';
+import imgCustomGift from '../assets/custom_gift.webp';
+import imgFlowerBouquet from '../assets/flower_bouquet.webp';
+import imgBowKeychain from '../assets/bow_keychain.webp';
 
 const Hero = () => {
   return (

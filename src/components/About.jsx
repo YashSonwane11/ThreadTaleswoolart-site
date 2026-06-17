@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Gift, Sparkles, Layers, Award } from 'lucide-react';
-import aboutCollage from '../assets/about_collage.png';
+import aboutCollage from '../assets/about_collage.webp';
 
 const About = () => {
   const features = [

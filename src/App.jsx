@@ -11,15 +11,9 @@ import Footer from './components/Footer';
 import StickyActions from './components/StickyActions';
 import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 import CursorSparkles from './components/CursorSparkles';
-import ScrapbookDecorator from './components/ScrapbookDecorator';
 
 function App() {
   const [loading, setLoading] = useState(true);
-  
-  // Scrapbook sticker stamps states
-  const [scrapbookEnabled, setScrapbookEnabled] = useState(false);
-  const [selectedSticker, setSelectedSticker] = useState({ id: 'daisy', emoji: '🌼', label: 'Daisy' });
-  const [stamps, setStamps] = useState([]);
 
   useEffect(() => {
     // Simulate initial asset loading for smoother animations
@@ -28,31 +22,6 @@ function App() {
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
-
-  // Document Click handler to spawn stamps when in scrapbook mode
-  const handleDocumentClick = (e) => {
-    if (!scrapbookEnabled) return;
-
-    // Avoid placing stamps on top of interactive buttons, inputs, links, navbar or customizer controls
-    if (e.target.closest('button, a, input, select, textarea, [role="button"], #customizer, #navbar, .glass')) {
-      return;
-    }
-
-    const newStamp = {
-      id: Date.now() + Math.random(),
-      x: e.pageX,
-      y: e.pageY,
-      emoji: selectedSticker.emoji,
-      rotation: Math.random() * 60 - 30, // -30 to 30 degrees rotation
-      scale: Math.random() * 0.3 + 0.85 // 0.85 to 1.15 scale range
-    };
-
-    setStamps((prev) => [...prev, newStamp]);
-  };
-
-  const handleClearStamps = () => {
-    setStamps([]);
-  };
 
   return (
     <>
@@ -103,7 +72,6 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          onClick={handleDocumentClick}
           className="relative min-h-screen bg-[#FFFDFB] text-[#4B372F]"
         >
           {/* 1. BubbleBackground covering the entire website */}
@@ -122,25 +90,6 @@ function App() {
 
           {/* 2. Soft blur overlay above background */}
           <div className="fixed inset-0 z-[1] bg-[#FFFDFB]/60 backdrop-blur-[1px] pointer-events-none" />
-
-          {/* Placed Scrapbook Stamps */}
-          {stamps.map((stamp) => (
-            <motion.div
-              key={stamp.id}
-              initial={{ opacity: 0, scale: 0, rotate: stamp.rotation - 15 }}
-              animate={{ opacity: 1, scale: stamp.scale, rotate: stamp.rotation }}
-              className="absolute z-[5] pointer-events-none select-none"
-              style={{
-                left: stamp.x,
-                top: stamp.y,
-                transform: 'translate(-50%, -50%)',
-              }}
-            >
-              <div className="w-10 h-10 rounded-full bg-white/90 shadow-soft border border-dashed border-primary/40 flex items-center justify-center text-xl">
-                {stamp.emoji}
-              </div>
-            </motion.div>
-          ))}
 
           {/* Interactive cursor sparkles trail */}
           <CursorSparkles />
@@ -163,16 +112,6 @@ function App() {
             {/* Luxury Footer */}
             <Footer />
           </div>
-
-          {/* Floating Scrapbook Toolbar */}
-          <ScrapbookDecorator
-            scrapbookEnabled={scrapbookEnabled}
-            setScrapbookEnabled={setScrapbookEnabled}
-            selectedSticker={selectedSticker}
-            setSelectedSticker={setSelectedSticker}
-            stampsCount={stamps.length}
-            onClearStamps={handleClearStamps}
-          />
 
           {/* Sticky Actions Widget (WhatsApp & Call) */}
           <StickyActions />

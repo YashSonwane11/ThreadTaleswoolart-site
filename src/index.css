@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D9A5A5;
+  --color-primary-hover: #C68E8E;
+  --color-secondary: #F7F1EC;
+  --color-accent: #A5B09B;
+  --color-text-dark: #4B372F;
+  --color-bg-cream: #FFFDFB;
+  
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-body: 'Poppins', 'Nunito', sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-dark);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+  }
+}
+
+/* Premium custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Custom background pattern class */
+.yarn-doodle-bg {
+  background-image: radial-gradient(rgba(217, 165, 165, 0.1) 1px, transparent 0), radial-gradient(rgba(165, 176, 155, 0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Custom soft shadow */
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(75, 55, 47, 0.05), 0 5px 15px -5px rgba(75, 55, 47, 0.03);
+}
+
+.shadow-premium {
+  box-shadow: 0 20px 40px -10px rgba(75, 55, 47, 0.08), 0 10px 20px -10px rgba(75, 55, 47, 0.05);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 253, 251, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 165, 165, 0.15);
+}
+
+/* Floating custom animation class */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-delayed {
+  animation: float-delayed 7s ease-in-out infinite;
+}

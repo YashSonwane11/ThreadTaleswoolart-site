@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import logoImg from '../assets/LOGO.jpg';
+import logoImg from '../assets/LOGO.webp';
 
 const InstagramIcon = ({ className }) => (
   <svg

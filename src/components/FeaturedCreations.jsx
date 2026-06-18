@@ -17,6 +17,7 @@ import imgHeartclip from '../assets/Hearclip.webp';
 import imgSunflower from '../assets/Sunflower.webp';
 import imgFlowersBouquet from '../assets/Flowors_Bouquet.webp';
 import imgChafaBlooms from '../assets/Handcrafted Chafa blooms.webp';
+import imgRose from '../assets/Rose.webp';
 
 const FeaturedCreations = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -171,6 +172,16 @@ const FeaturedCreations = () => {
       description: 'Exquisite handcrafted crochet Plumeria (Chafa) blossoms with detailed green stems. The ultimate modern centerpiece.',
       options: ['Choose single stem or multi-stem bunch', 'Choose flower color grade (White-Yellow gradient)', 'Includes rustic vase wrap option'],
       whatsappMsg: "Hi ThreadTales! I'd love to order the Chafa Bloom Stems. Can I customize the stem count?"
+    },
+    {
+      id: 15,
+      name: 'Rose Blossom Stem',
+      category: 'Bouquets',
+      image: imgRose,
+      tag: 'Romantic 🌹',
+      description: 'An elegant handcrafted crochet red rose stem. A timeless, beautiful bloom that never fades, perfect as a single gift or part of a customized bouquet.',
+      options: ['Available in Classic Red, Soft Pink, or White', 'Select stem length', 'Add custom message tag'],
+      whatsappMsg: "Hi ThreadTales! I'd love to order the Rose Blossom Stem. Can we discuss yarn colors and options?"
     }
   ];
 

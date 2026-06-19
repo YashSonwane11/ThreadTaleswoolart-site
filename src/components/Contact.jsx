@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Mail, Phone, Copy, Check, Sparkles } from 'lucide-react';
+import { getWhatsAppLink } from '../utils/whatsapp';
 
 const InstagramIcon = ({ className }) => (
   <svg
@@ -63,7 +64,7 @@ const Contact = () => {
           {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
-              href={`https://wa.me/919309456377?text=${encodeURIComponent("Hi ThreadTales! 🌼 I'd like to discuss a custom crochet order request.")}`}
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white font-body text-xs font-semibold rounded-full hover:opacity-90 shadow-soft hover:shadow-premium transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"

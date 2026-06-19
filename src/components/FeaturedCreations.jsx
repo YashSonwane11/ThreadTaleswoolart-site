@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, MessageCircle, Heart, HeartHandshake } from 'lucide-react';
+import { getWhatsAppLink } from '../utils/whatsapp';
 
 // Real product images imports
 import imgButterfly from '../assets/Bagkeycahin_Butterfly.webp';
@@ -189,9 +190,8 @@ const FeaturedCreations = () => {
     ? products
     : products.filter(p => p.category === activeTab);
 
-  const handleWhatsappInquiry = (msg) => {
-    const encoded = encodeURIComponent(msg);
-    window.open(`https://wa.me/9309456377?text=${encoded}`, '_blank');
+  const handleWhatsappInquiry = (productName) => {
+    window.open(getWhatsAppLink(productName), '_blank');
   };
 
   return (
@@ -384,16 +384,16 @@ const FeaturedCreations = () => {
                   <div>
                     <button
                       onClick={() => {
-                        handleWhatsappInquiry(selectedProduct.whatsappMsg);
+                        handleWhatsappInquiry(selectedProduct.name);
                         setSelectedProduct(null);
                       }}
-                      className="w-full py-3.5 bg-primary text-white font-body text-xs font-semibold rounded-xl hover:bg-primary-hover shadow-soft flex items-center justify-center gap-2 hover:shadow-premium transition-all duration-300 cursor-pointer"
+                      className="w-full py-3.5 bg-[#25D366] text-white font-body text-xs font-semibold rounded-xl hover:opacity-90 shadow-soft flex items-center justify-center gap-2 hover:shadow-premium transition-all duration-300 cursor-pointer"
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      REQUEST CUSTOM ORDER VIA WHATSAPP
+                      <MessageCircle className="h-4 w-4 fill-current" />
+                      ORDER NOW VIA WHATSAPP
                     </button>
                     <p className="text-[10px] font-body text-text-dark/45 text-center mt-2.5">
-                      No upfront payment! We will discuss colors and pricing on chat.
+                      No upfront payment! We will discuss customization and pricing on chat.
                     </p>
                   </div>
                 </div>

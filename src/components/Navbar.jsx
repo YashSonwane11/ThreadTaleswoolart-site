@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import logoImg from '../assets/LOGO.webp';
+import { getWhatsAppLink } from '../utils/whatsapp';
 
 const InstagramIcon = ({ className }) => (
   <svg
@@ -41,7 +42,6 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Creations', href: '#creations' },
-    { name: 'Design Lab 🎨', href: '#customizer' },
     { name: 'Why Us', href: '#why-us' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -93,7 +93,7 @@ const Navbar = () => {
               <InstagramIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://wa.me/9309456377?text=Hi%20ThreadTales!%20I'd%20like%20to%20place%20a%20custom%20order."
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-primary text-white rounded-full text-xs font-semibold tracking-wider hover:bg-primary-hover shadow-soft transition-all duration-300 flex items-center gap-1.5"
@@ -141,7 +141,7 @@ const Navbar = () => {
                 <span className="text-sm font-body">Instagram</span>
               </a>
               <a
-                href="https://wa.me/9309456377?text=Hi%20ThreadTales!%20I'd%20like%20to%20place%20a%20custom%20order."
+                href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-primary text-white rounded-full text-xs font-semibold hover:bg-primary-hover shadow-soft flex items-center gap-1.5"

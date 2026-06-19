@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import FeaturedCreations from './components/FeaturedCreations';
-import VisualCustomizer from './components/VisualCustomizer';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -104,7 +103,6 @@ function App() {
               <Hero />
               <About />
               <FeaturedCreations />
-              <VisualCustomizer />
               <WhyChooseUs />
               <Contact />
             </main>

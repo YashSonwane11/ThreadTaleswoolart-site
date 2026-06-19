@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, MessageCircle, Mail } from 'lucide-react';
+import { getWhatsAppLink } from '../utils/whatsapp';
 
 const InstagramIcon = ({ className }) => (
   <svg
@@ -22,7 +23,7 @@ const InstagramIcon = ({ className }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary/40 py-12 border-t border-primary/10">
+    <footer className="bg-secondary/40 pt-12 pb-24 md:py-12 border-t border-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center text-center space-y-6">
           
@@ -51,7 +52,7 @@ const Footer = () => {
               <InstagramIcon className="h-4.5 w-4.5" />
             </a>
             <a
-              href={`https://wa.me/9309456377?text=${encodeURIComponent("Hi! I'd like to check out some custom designs.")}`}
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full bg-white border border-primary/10 hover:border-primary text-text-dark hover:text-primary shadow-soft transition-all duration-300"

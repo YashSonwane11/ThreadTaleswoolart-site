@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import { getWhatsAppLink } from '../utils/whatsapp';
 
 // Real product images imports
 import imgHeroGallery from '../assets/hero_gallery.webp';
@@ -66,8 +67,10 @@ const Hero = () => {
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
               <a
-                href="#contact"
-                className="w-full sm:w-auto px-8 py-4 bg-white text-text-dark font-body text-sm font-semibold rounded-full border border-primary/20 hover:border-primary/50 shadow-soft hover:bg-secondary transition-all duration-300 flex items-center justify-center"
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-white text-text-dark font-body text-sm font-semibold rounded-full border border-primary/20 hover:border-primary/50 shadow-soft hover:bg-secondary transition-all duration-300 flex items-center justify-center cursor-pointer"
               >
                 Custom Order
               </a>

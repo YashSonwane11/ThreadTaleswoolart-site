@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Tagline */}
           <p className="font-body text-xs italic text-text-dark/70">
-            From Yarn To Your Heart 🌼
+            Handcrafted Crochet Creations Made With Love 🌼
           </p>
 
           {/* Social Links */}

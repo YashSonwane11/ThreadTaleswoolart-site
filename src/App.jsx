@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import FeaturedCreations from './components/FeaturedCreations';
+import CustomerFavorites from './components/CustomerFavorites';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -13,6 +14,7 @@ import CursorSparkles from './components/CursorSparkles';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     // Simulate initial asset loading for smoother animations
@@ -59,7 +61,7 @@ function App() {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="font-body text-[10px] text-text-dark/50 tracking-widest uppercase mt-2"
             >
-              From Yarn To Your Heart 🌼
+              Handcrafted Crochet Creations Made With Love 🌼
             </motion.p>
           </motion.div>
         )}
@@ -102,7 +104,8 @@ function App() {
             <main className="flex-grow">
               <Hero />
               <About />
-              <FeaturedCreations />
+              <CustomerFavorites setSelectedProduct={setSelectedProduct} />
+              <FeaturedCreations selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} />
               <WhyChooseUs />
               <Contact />
             </main>

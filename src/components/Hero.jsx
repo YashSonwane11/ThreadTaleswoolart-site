@@ -49,7 +49,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg font-body text-text-dark/80 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Handcrafted crochet creations made with love, care, and creativity. From adorable keychains to customized gifts, every piece is designed to bring warmth to your heart. 🌼
+              Handcrafted Crochet Creations Made With Love. From adorable keychains to customized gifts, every piece is designed to bring warmth to your heart. 🌼
             </motion.p>
 
             {/* Buttons */}
